@@ -1,0 +1,28 @@
+.sortingParamContainer {
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.sort_text{
+  text-align: right;
+  width: 20%;
+  padding-right: 2%;
+}
+
+.paramContainer {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .sortingParamContainer {
+    display: flex;
+    width: var(--max-percentage);
+  }
+}

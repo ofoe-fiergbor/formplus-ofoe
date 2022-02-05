@@ -1,0 +1,11 @@
+.header_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .header_container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

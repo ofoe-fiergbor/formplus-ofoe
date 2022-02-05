@@ -1,0 +1,5 @@
+html{
+    --border-radius: 2px;
+    --max-percentage: 100%;
+    --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+}

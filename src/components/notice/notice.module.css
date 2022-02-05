@@ -1,0 +1,37 @@
+.notice_container {
+  width: var(--max-percentage);
+  background-color: var(--notice-background);
+  margin: 2% 0;
+  padding: 1% 1% 0.5% 1%;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon {
+  width: 1.4em;
+  height: 1.4em;
+  display: flex;
+  margin-right: 1em;
+  border-radius: 50%;
+  font-style: italic;
+  align-items: center;
+  justify-content: center;
+  color: var(--notice-icon);
+  border: 1px solid var(--notice-icon);
+}
+
+@media (max-width: 480px) {
+  .notice_container {
+    font-size: var(--xsmall-font-size);
+    padding: 2% 2% 1% 2%;
+    margin: 5% 0%;
+  }
+
+  #icon {
+    width: 2.8em;
+    height: 2em;
+    font-weight: bold;
+  }
+}

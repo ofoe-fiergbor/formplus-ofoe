@@ -1,0 +1,25 @@
+.optionContainer {
+    display: flex;
+    height: var(--max-percentage);
+    flex-direction: column;
+    padding: 1% 2%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    width: 25%;
+  }
+  .label {
+    font-size: var(--xsmall-font-size);
+    padding-bottom: 5%;
+    color: var(--text-small);
+  }
+  .select {
+      background-color: var(--transparent);
+      border: none;
+      outline: none;
+  }
+  
+  @media (max-width: 480px) {
+    .optionContainer {
+      width: 30%;
+    }
+  }

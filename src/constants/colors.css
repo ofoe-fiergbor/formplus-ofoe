@@ -1,0 +1,14 @@
+html {
+    --white: #ffff;
+    --black:#0000;
+    --background: #E5E5E5;
+    --background-grey: #F9F9F9;
+    --notice-icon:#FC830A;
+    --notice-background: #FFF4EA;
+    --text-large:#333447;
+    --text-small: #3F3E3E;
+    --text-grey:#8F8B8B;
+    --green: #08BD37;
+    --border-color:#C4C4C4;
+    --transparent:transparent
+}
