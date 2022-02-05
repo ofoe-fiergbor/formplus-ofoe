@@ -24,6 +24,8 @@ const SortingParams = () => {
       case sortPreferences.date:
         dispatch(sortByDate(value));
         break;
+      default:
+        break;
     }
   };
 
