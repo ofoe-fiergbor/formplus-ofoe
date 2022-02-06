@@ -25,6 +25,7 @@ function App() {
 
   useEffect(() => {
     fetchAllTemplates();
+    // eslint-disable-next-line
   }, []);
 
   return (
