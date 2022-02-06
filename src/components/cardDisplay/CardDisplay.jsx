@@ -10,7 +10,7 @@ import {
   sortNameDescending,
   dateAscending,
   dateDescending,
-} from "../../utils/Utils";
+} from "../../domain/utils/Utils";
 
 const CardDisplay = () => {
   const {

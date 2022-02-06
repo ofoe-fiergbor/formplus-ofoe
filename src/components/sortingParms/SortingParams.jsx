@@ -1,14 +1,13 @@
 import React from "react";
-import styles from "./sortingParms.module.css";
-import { useDispatch } from "react-redux";
 import Dropdown from "../dropdown/Dropdown";
+import styles from "./sortingParms.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { optionTypes } from "../../constants/optionsTypes";
 import {
   sortByCategory,
   sortByDate,
   sortInOrder,
 } from "../../domain/redux/templateSlicer";
-import { useSelector } from "react-redux";
 
 const SortingParams = () => {
   const { dateSort, orderSort, currentCategory } = useSelector(
