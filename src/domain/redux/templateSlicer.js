@@ -30,17 +30,19 @@ const templateSlice = createSlice({
       if (action.payload === categories.all) {
         state.categorySortedTemplates = undefined;
       } else {
-        state.categorySortedTemplates = [...state.templates].filter((e) =>
+        state.categorySortedTemplates = state.templates.filter((e) =>
           e.category.find((c) => c === action.payload)
         );
       }
       state.currentCategory = action.payload;
     },
     sortByDate: (state, action) => {
+      state.orderSort = sortingOrder.default;
       state.dateSort = action.payload;
     },
     sortInOrder: (state, action) => {
       state.orderSort = action.payload;
+      state.dateSort = sortingOrder.default;
     },
   },
 });

@@ -2,16 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./dropdown.module.css";
 
-const Dropdown = ({ label, options, handleChange }) => {
+const Dropdown = ({ label, options, handleChange, value }) => {
   const { isLoading } = useSelector((state) => state.templates);
 
   return (
     <div className={styles.optionContainer}>
-      <label htmlFor="cars" className={styles.label}>
+      <label className={styles.label}>
         {label}
       </label>
       <select
         disabled={isLoading}
+        value={value}
         className={styles.select}
         onChange={(e) => handleChange(e)}
         name={label}
