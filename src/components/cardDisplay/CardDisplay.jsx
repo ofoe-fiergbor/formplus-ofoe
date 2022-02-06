@@ -5,12 +5,7 @@ import { useSelector } from "react-redux";
 import styles from "./cardDisplay.module.css";
 import DisplayFooter from "../displayFooter/DisplayFooter";
 import { sortingOrder } from "../../constants/optionsTypes";
-import {
-  sortNameAscending,
-  sortNameDescending,
-  dateAscending,
-  dateDescending,
-} from "../../domain/utils/Utils";
+import {sortNameAscending, sortNameDescending, dateAscending, dateDescending} from "../../domain/utils/Utils"
 
 const CardDisplay = () => {
   const {
