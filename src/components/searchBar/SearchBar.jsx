@@ -1,9 +1,10 @@
 import styles from "./searchbar.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { searchTemplate } from "../../domain/redux/templateSlicer";
-import { useDispatch } from "react-redux";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
+  const { isLoading } = useSelector((state) => state.templates);
 
   const handleOnChange = (e) => {
     dispatch(searchTemplate(e.target.value));
@@ -13,6 +14,7 @@ const SearchBar = () => {
     <form className={styles.searchContainer}>
       <input
         type="text"
+        disabled={isLoading}
         className={styles.input}
         placeholder="Search Templates"
         onChange={(e) => handleOnChange(e)}

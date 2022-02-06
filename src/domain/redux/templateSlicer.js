@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { categories, sortingOrder } from "../../constants/optionsTypes";
 
 const initialState = {
+  isLoading: false,
   templates: undefined,
   searchedTemplate: undefined,
   categorySortedTemplates: undefined,
@@ -14,11 +15,14 @@ const templateSlice = createSlice({
   name: "templates",
   initialState,
   reducers: {
+    setLoading: (state, action) => {
+      state.isLoading = action.payload;
+    },
     setTemplates: (state, action) => {
       state.templates = action.payload;
     },
     searchTemplate: (state, action) => {
-      state.searchedTemplate = [...state.templates].filter((val) =>
+      state.searchedTemplate = state.templates.filter((val) =>
         val.name.toLowerCase().includes(action.payload.toLowerCase())
       );
     },
@@ -42,11 +46,12 @@ const templateSlice = createSlice({
 });
 
 export const {
-  setTemplates,
-  searchTemplate,
-  sortByCategory,
   sortByDate,
+  setLoading,
   sortInOrder,
+  setTemplates,
+  sortByCategory,
+  searchTemplate,
 } = templateSlice.actions;
 
 export default templateSlice.reducer;

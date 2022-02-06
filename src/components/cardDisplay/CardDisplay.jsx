@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./cardDisplay.module.css";
 import Card from "../card/Card";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import styles from "./cardDisplay.module.css";
 import DisplayFooter from "../displayFooter/DisplayFooter";
 
 const CardDisplay = () => {
