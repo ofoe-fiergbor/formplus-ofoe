@@ -18,15 +18,9 @@ const templateSlice = createSlice({
       state.templates = action.payload;
     },
     searchTemplate: (state, action) => {
-      state.searchedTemplate = [...state.templates].filter((val) => {
-        if (action.payload.trim() === "") {
-          return val;
-        } else if (
-          val.name.toLowerCase().includes(action.payload.toLowerCase())
-        ) {
-          return val;
-        }
-      });
+      state.searchedTemplate = [...state.templates].filter((val) =>
+        val.name.toLowerCase().includes(action.payload.toLowerCase())
+      );
     },
     sortByCategory: (state, action) => {
       if (action.payload === categories.all) {
@@ -47,7 +41,12 @@ const templateSlice = createSlice({
   },
 });
 
-export const { setTemplates, searchTemplate, sortByCategory, sortByDate, sortInOrder } =
-  templateSlice.actions;
+export const {
+  setTemplates,
+  searchTemplate,
+  sortByCategory,
+  sortByDate,
+  sortInOrder,
+} = templateSlice.actions;
 
 export default templateSlice.reducer;
